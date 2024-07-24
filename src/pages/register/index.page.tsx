@@ -8,6 +8,10 @@ import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import { api } from '@/lib/axios'
 import { AxiosError } from 'axios'
+import { useSession } from 'next-auth/react'
+import { GetServerSideProps } from 'next'
+import { getServerSession } from 'next-auth'
+import { buildNextAuthOptions } from '../api/auth/[...nextauth].api'
 
 const registerFormSchema = z.object({
   username: z
@@ -33,14 +37,8 @@ export default function Register() {
   } = useForm<RegisterFormData>({
     resolver: zodResolver(registerFormSchema),
   })
-
+  const session = useSession()
   const router = useRouter()
-
-  useEffect(() => {
-    if (router.query.username) {
-      setValue('username', String(router.query.username))
-    }
-  }, [router.query?.username, setValue])
 
   async function handleRegister(_data: RegisterFormData) {
     try {
