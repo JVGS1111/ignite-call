@@ -6,9 +6,11 @@ import {
   TimePickerItem,
   TimePickerList,
 } from './styles'
+import { useState } from 'react'
+import dayjs from 'dayjs'
 
 export function CalendarStep() {
-  const isDateSelected = true
+  const isDateSelected = false
 
   return (
     <Container isTimePickerOpen={isDateSelected}>
