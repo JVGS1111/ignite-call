@@ -18,6 +18,7 @@ export function Calendar() {
         <CalendarTitle>
           Dezembro <span>2022</span>
         </CalendarTitle>
+
         <CalendarActions>
           <button>
             <CaretLeft />
@@ -42,6 +43,29 @@ export function Calendar() {
             <td></td>
             <td></td>
             <td></td>
+            <td>
+              <CalendarDay>1</CalendarDay>
+            </td>
+            <td>
+              <CalendarDay disabled>2</CalendarDay>
+            </td>
+            <td>
+              <CalendarDay>3</CalendarDay>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <CalendarDay>1</CalendarDay>
+            </td>
+            <td>
+              <CalendarDay>1</CalendarDay>
+            </td>
+            <td>
+              <CalendarDay>1</CalendarDay>
+            </td>
+            <td>
+              <CalendarDay>1</CalendarDay>
+            </td>
             <td>
               <CalendarDay>1</CalendarDay>
             </td>

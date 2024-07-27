@@ -15,6 +15,7 @@ export const CalendarHeader = styled('div', {
 
 export const CalendarTitle = styled(Text, {
   fontWeight: '$medium',
+
   span: {
     color: '$gray200',
   },
@@ -30,19 +31,19 @@ export const CalendarActions = styled('div', {
     cursor: 'pointer',
     lineHeight: 0,
     borderRadius: '$sm',
-  },
 
-  svg: {
-    width: '$5',
-    height: '$5',
-  },
+    svg: {
+      width: '$5',
+      height: '$5',
+    },
 
-  '&:hover': {
-    color: '$gray100',
-  },
+    '&:hover': {
+      color: '$gray100',
+    },
 
-  '$:focus': {
-    boxShadow: '0 0 0 2px $colors$gray100',
+    '&:focus': {
+      boxShadow: '0 0 0 2px $colors$gray100',
+    },
   },
 })
 
@@ -59,8 +60,8 @@ export const CalendarBody = styled('table', {
   },
 
   'tbody:before': {
-    content: '.',
     lineHeight: '0.75rem',
+    content: '.',
     display: 'block',
     color: '$gray800',
   },
@@ -89,7 +90,7 @@ export const CalendarDay = styled('button', {
     background: '$gray500',
   },
 
-  '$:focus': {
+  '&:focus': {
     boxShadow: '0 0 0 2px $colors$gray100',
   },
 })
