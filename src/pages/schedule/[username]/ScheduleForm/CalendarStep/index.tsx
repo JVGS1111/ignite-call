@@ -10,11 +10,15 @@ import { useState } from 'react'
 import dayjs from 'dayjs'
 
 export function CalendarStep() {
-  const isDateSelected = false
+  const [selectedDate, setSelectedDate] = useState<Date | null>(null)
+  const isDateSelected = !!selectedDate
 
   return (
     <Container isTimePickerOpen={isDateSelected}>
-      <Calendar></Calendar>
+      <Calendar
+        selectedDate={selectedDate}
+        onDateSelected={setSelectedDate}
+      ></Calendar>
       {isDateSelected && (
         <TimePicker>
           <TimePickerHeader>
